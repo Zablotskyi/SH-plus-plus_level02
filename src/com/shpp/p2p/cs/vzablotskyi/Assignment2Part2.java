@@ -1,39 +1,66 @@
 package com.shpp.p2p.cs.vzablotskyi;
 
-import acm.graphics.GLabel;
-import acm.graphics.GLine;
 import acm.graphics.GOval;
 import acm.graphics.GRect;
 import com.shpp.cs.a.graphics.WindowProgram;
-
 import java.awt.*;
 
 public class Assignment2Part2 extends WindowProgram {
+
     @Override
     public void run() {
-//        GLabel l = new GLabel("dog", 100, 100);
-//        l.setFont("Verdana-50");
-//        l.setColor(Color.GRAY);
-//        add(l);
-        for (int i = 0; i < 10; i++) {
-            GRect r = new GRect(100 + i * 10, 100 + i * 10, 200, 200);
-            r.setColor(Color.RED);
-            r.setFilled(true);
-            r.setFillColor(Color.GREEN);
-            add(r);
+        final double CIRCLE_CREATED_BY_WIDTH = getWidth() / 3.0;
+        final double CIRCLE_CREATED_BY_HEIGHT = getHeight() / 3.0;
+        if (getWidth() >= getHeight()) {
+            GOval leftTopCircle = new GOval(0, 0, CIRCLE_CREATED_BY_HEIGHT, CIRCLE_CREATED_BY_HEIGHT);
+            leftTopCircle.setFilled(true);
+            leftTopCircle.setColor(Color.RED);
+            add(leftTopCircle);
 
-            GOval o = new GOval(100 + i * 10, 100 + i * 10, 200, 200);
-            o.setColor(Color.GREEN);
-            add(o);
+            GOval rightTopCircle = new GOval(getWidth() - CIRCLE_CREATED_BY_HEIGHT, 0, CIRCLE_CREATED_BY_HEIGHT, CIRCLE_CREATED_BY_HEIGHT);
+            rightTopCircle.setFilled(true);
+            rightTopCircle.setColor(Color.BLUE);
+            add(rightTopCircle);
 
-            GLine l = new GLine(100 + i * 10, 100 + i * 10, 200, 200);
-            l.setColor(Color.BLUE);
-            add(l);
-            try {
-                Thread.sleep(1500);
-            } catch (InterruptedException e) {
-                throw new RuntimeException(e);
-            }
+            GOval leftBottomCircle = new GOval(0, getHeight() - CIRCLE_CREATED_BY_HEIGHT, CIRCLE_CREATED_BY_HEIGHT, CIRCLE_CREATED_BY_HEIGHT);
+            leftBottomCircle.setFilled(true);
+            leftBottomCircle.setColor(Color.BLACK);
+            add(leftBottomCircle);
+
+            GOval rightBottomCircle = new GOval(getWidth() - CIRCLE_CREATED_BY_HEIGHT, getHeight() - CIRCLE_CREATED_BY_HEIGHT, CIRCLE_CREATED_BY_HEIGHT, CIRCLE_CREATED_BY_HEIGHT);
+            rightBottomCircle.setFilled(true);
+            rightBottomCircle.setColor(Color.YELLOW);
+            add(rightBottomCircle);
+
+            GRect square = new GRect((CIRCLE_CREATED_BY_HEIGHT) / 2, (CIRCLE_CREATED_BY_HEIGHT) / 2, getWidth() - CIRCLE_CREATED_BY_HEIGHT, getHeight() - CIRCLE_CREATED_BY_HEIGHT);
+            square.setFilled(true);
+            square.setColor(Color.GRAY);
+            add(square);
+        } else if (getWidth() < getHeight()) {
+            GOval leftTopCircle = new GOval(0, 0, CIRCLE_CREATED_BY_WIDTH, CIRCLE_CREATED_BY_WIDTH);
+            leftTopCircle.setFilled(true);
+            leftTopCircle.setColor(Color.RED);
+            add(leftTopCircle);
+
+            GOval rightTopCircle = new GOval(getWidth() - CIRCLE_CREATED_BY_WIDTH, 0, CIRCLE_CREATED_BY_WIDTH, CIRCLE_CREATED_BY_WIDTH);
+            rightTopCircle.setFilled(true);
+            rightTopCircle.setColor(Color.BLUE);
+            add(rightTopCircle);
+
+            GOval leftBottomCircle = new GOval(0, getHeight() - CIRCLE_CREATED_BY_WIDTH, CIRCLE_CREATED_BY_WIDTH, CIRCLE_CREATED_BY_WIDTH);
+            leftBottomCircle.setFilled(true);
+            leftBottomCircle.setColor(Color.BLACK);
+            add(leftBottomCircle);
+
+            GOval rightBottomCircle = new GOval(getWidth() - CIRCLE_CREATED_BY_WIDTH, getHeight() - CIRCLE_CREATED_BY_WIDTH, CIRCLE_CREATED_BY_WIDTH, CIRCLE_CREATED_BY_WIDTH);
+            rightBottomCircle.setFilled(true);
+            rightBottomCircle.setColor(Color.YELLOW);
+            add(rightBottomCircle);
+
+            GRect square = new GRect((CIRCLE_CREATED_BY_WIDTH) / 2, (CIRCLE_CREATED_BY_WIDTH) / 2, getWidth() - CIRCLE_CREATED_BY_WIDTH, getHeight() - CIRCLE_CREATED_BY_WIDTH);
+            square.setFilled(true);
+            square.setColor(Color.GRAY);
+            add(square);
         }
     }
 }
