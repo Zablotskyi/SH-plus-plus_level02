@@ -11,10 +11,6 @@ public class Assignment2Part4 extends WindowProgram {
     private final double FLAG_HEIGHT = 300;
     @Override
     public void run() {
-//        GRect flagFrame = new GRect((getWidth() - FLAG_WIDTH) / 2, (getHeight() - FLAG_HEIGHT) / 2, FLAG_WIDTH, FLAG_HEIGHT);
-//        flagFrame.setColor(Color.BLACK);
-//        add(flagFrame);
-
         GRect firstLane = new GRect((getWidth() - FLAG_WIDTH) / 2, (getHeight() - FLAG_HEIGHT) / 2, 450, 100);
         firstLane.setFilled(true);
         firstLane.setColor(Color.BLACK);
