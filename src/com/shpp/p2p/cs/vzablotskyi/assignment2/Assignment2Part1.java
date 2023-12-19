@@ -1,4 +1,4 @@
-package com.shpp.p2p.cs.vzablotskyi;
+package com.shpp.p2p.cs.vzablotskyi.assignment2;
 
 import com.shpp.cs.a.console.TextProgram;
 
