@@ -10,7 +10,7 @@ public class Assignment2Part4 extends WindowProgram {
     private static final double FLAG_WIDTH = 450; // flag width constant
     private static final double FLAG_HEIGHT = 300; // flag height constant
 
-    /* the method creates the Germany flag. Three rectangles are created that correspond to the colors of the Germany flag and are centered
+    /** the method creates the Germany flag. Three rectangles are created that correspond to the colors of the Germany flag and are centered
      * relative to the size of the window. An inscription with the name of the flag is added in the lower right corner */
     @Override
     public void run() {
@@ -27,7 +27,7 @@ public class Assignment2Part4 extends WindowProgram {
         add(countryFlag, x, y);
     }
 
-    /* method creates one of the flag strips with the specified size, color and coordinates */
+    /** method creates one of the flag strips with the specified size, color and coordinates */
     private void creteRectangle(double x, double y, double width, double height, Color color) {
         GRect rectangle = new GRect(x, y, width, height);
         rectangle.setFilled(true);

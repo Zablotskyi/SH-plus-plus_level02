@@ -26,7 +26,7 @@ public class Assignment2Part6 extends WindowProgram {
         double controlX = x + circleRadius; // initial X coordinate for the second section of the snake
         double controlY = y - curveRadius / 2;  // initial Y coordinate for the second section of the snake
 
-        // add the first section of the snake
+        /** add the first section of the snake*/
         GOval firstSnakeSection = new GOval(x, y, circleRadius * 2, circleRadius * 2);
         firstSnakeSection.setFilled(true);
         firstSnakeSection.setColor(BORDER_SECTION_COLOR);
@@ -34,7 +34,7 @@ public class Assignment2Part6 extends WindowProgram {
         add(firstSnakeSection);
 
 
-        // add the second section of the snake
+        /** add the second section of the snake*/
         GOval secondSnakeSection = new GOval(controlX, controlY, curveRadius * 2, curveRadius * 2);
         secondSnakeSection.setFilled(true);
         secondSnakeSection.setColor(BORDER_SECTION_COLOR);
@@ -42,6 +42,3 @@ public class Assignment2Part6 extends WindowProgram {
         add(secondSnakeSection);
     }
 }
-
-
-

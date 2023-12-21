@@ -10,12 +10,12 @@ public class Assignment2Part1 extends TextProgram {
         double b = readDouble("Please enter b:");
         double c = readDouble("Please enter c:");
 
-/*
+/**
         discriminant formula
 */
         double discriminant = b * b - 4 * a * c;
 
-/*
+/**
          Checking the discriminant
 */
         if (discriminant > 0) {

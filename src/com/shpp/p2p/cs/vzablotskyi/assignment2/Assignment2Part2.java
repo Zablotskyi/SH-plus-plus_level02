@@ -6,7 +6,7 @@ import com.shpp.cs.a.graphics.WindowProgram;
 import java.awt.*;
 
 public class Assignment2Part2 extends WindowProgram {
-    /*check whether we have a larger width or height. If the width is greater, then create 4 circles with a diameter of
+    /**  check whether we have a larger width or height. If the width is greater, then create 4 circles with a diameter of
      * 1/3 of the height at the corners of the field, if the height is greater, then create 4 circles with a diameter of
      * 1/3 of the width at the corners of the field
      * create a rectangle in the middle, each vertex of the rectangle is the center of the circle*/
@@ -28,7 +28,7 @@ public class Assignment2Part2 extends WindowProgram {
             creteRectangle((CIRCLE_CREATED_BY_WIDTH) / 2, (CIRCLE_CREATED_BY_WIDTH) / 2, getWidth() - CIRCLE_CREATED_BY_WIDTH, getHeight() - CIRCLE_CREATED_BY_WIDTH, Color.WHITE);
         }
     }
-    /* the method creates a circle at the specified coordinates X and Y,
+    /** the method creates a circle at the specified coordinates X and Y,
     * with the specified width and height and fills it with a color */
     private void createCircle(double x, double y, double width, double height, Color color) {
         GOval circle = new GOval(x, y, width, height);
@@ -37,7 +37,7 @@ public class Assignment2Part2 extends WindowProgram {
         add(circle);
     }
 
-    /* method creates a rectangle at the given coordinates X and Y, with the given width and height and fills it with a color */
+    /** method creates a rectangle at the given coordinates X and Y, with the given width and height and fills it with a color */
     private void creteRectangle(double x, double y, double width, double height, Color color) {
         GRect square = new GRect(x, y, width, height);
         square.setFilled(true);

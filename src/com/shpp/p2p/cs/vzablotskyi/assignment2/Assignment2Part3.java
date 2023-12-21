@@ -6,11 +6,11 @@ import com.shpp.cs.a.graphics.WindowProgram;
 import java.awt.*;
 
 public class Assignment2Part3 extends WindowProgram {
-    /* the method draws the first finger according to the coordinates passed in the parameters,
+    /** the method draws the first finger according to the coordinates passed in the parameters,
      * and positions the other two fingers and heel according to the first finger
      */
 
-    /* Constants controlling the relative positions of the
+    /** Constants controlling the relative positions of the
      * three toes to the upper-left corner of the pawprint.
      *
      * (Yes, I know that actual pawprints have four toes.
@@ -23,21 +23,21 @@ public class Assignment2Part3 extends WindowProgram {
     private static final double THIRD_TOE_OFFSET_X = 60;
     private static final double THIRD_TOE_OFFSET_Y = 20;
 
-    /* The position of the heel relative to the upper-left
+    /** The position of the heel relative to the upper-left
      * corner of the pawprint.
      */
     private static final double HEEL_OFFSET_X = 20;
     private static final double HEEL_OFFSET_Y = 40;
 
-    /* Each toe is an oval with this width and height. */
+    /** Each toe is an oval with this width and height. */
     private static final double TOE_WIDTH = 20;
     private static final double TOE_HEIGHT = 30;
 
-    /* The heel is an oval with this width and height. */
+    /** The heel is an oval with this width and height. */
     private static final double HEEL_WIDTH = 40;
     private static final double HEEL_HEIGHT = 60;
 
-    /* The default width and height of the window. These constants will tell Java to
+    /** The default width and height of the window. These constants will tell Java to
      * create a window whose size is *approximately* given by these dimensions. You should
      * not directly use these constants in your program; instead, use getWidth() and
      * getHeight(), which return the *exact* width and height of the window.
@@ -53,7 +53,6 @@ public class Assignment2Part3 extends WindowProgram {
     /**
      * Draws a pawprint. The parameters should specify the upper-left corner of the
      * bounding box containing that pawprint.
-     *
      * @param x The x coordinate of the upper-left corner of the bounding box for the pawprint.
      * @param y The y coordinate of the upper-left corner of the bounding box for the pawprint.
      */
