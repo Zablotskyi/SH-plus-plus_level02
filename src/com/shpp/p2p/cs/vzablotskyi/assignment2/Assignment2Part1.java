@@ -11,6 +11,7 @@ public class Assignment2Part1 extends TextProgram {
         a = readDouble("Please enter a:");
         b = readDouble("Please enter b:");
         c = readDouble("Please enter c:");
+        checkingTheDiscriminant(a, b, c);
     }
     /**
      searching for a discriminant using a mathematical formula of three derivatives
