@@ -3,21 +3,19 @@ package com.shpp.p2p.cs.vzablotskyi.assignment2;
 import com.shpp.cs.a.console.TextProgram;
 
 public class Assignment2Part1 extends TextProgram {
+    double a, b, c; // derivative numbers
+    double discriminant = b * b - 4 * a * c; // discriminant formula
 
     @Override
     public void run() {
-        double a = readDouble("Please enter a:");
-        double b = readDouble("Please enter b:");
-        double c = readDouble("Please enter c:");
-
-/**
-        discriminant formula
-*/
-        double discriminant = b * b - 4 * a * c;
-
-/**
-         Checking the discriminant
-*/
+        a = readDouble("Please enter a:");
+        b = readDouble("Please enter b:");
+        c = readDouble("Please enter c:");
+    }
+    /**
+     searching for a discriminant using a mathematical formula of three derivatives
+     */
+    private void checkingTheDiscriminant(double a, double b, double c) {
         if (discriminant > 0) {
             double root1 = (-b + Math.sqrt(discriminant)) / (2 * a);
             double root2 = (-b - Math.sqrt(discriminant)) / (2 * a);
